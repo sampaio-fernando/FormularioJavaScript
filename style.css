@@ -1,4 +1,87 @@
-body{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* espaço entre o conteúdo e a borda */
+}
+
+body {
+    background-color: rgb(62, 66, 66);
+    min-height: 100vh;
+    /* define a altura da tela do navegador */
+    display: flex;
+    /* porta de entrada para usar centralizadores de elementos */
+    justify-content: center;
+    /* horizontal  */
+    align-items: center;
+    /* vertical */
+}
+
+.container {
+    background-color: #fafafa;
+    border-radius: 14px;
+    margin: 14px;
+    max-width: 600px;
+    /* quantidade de pixels da seleção */
+    width: 100%;
+    /* largura para não cortar o conteúdo */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header {
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
+    /* espaçamento */
+}
+
+.form {
+    padding: 18px;
+}
+
+.form-content {
+    margin-bottom: 8px;
+    /* espaço abaixo do elemento, parte externa*/
+    padding-bottom: 18px;
+    /* espaço interno inferior*/
+    position: relative;
+}
+
+.form-content input {
+    display: block;
+    /* fica sozinho em uma linha */
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #d1cfcf;
+    /* expessura, linha contínua e cor da borda */
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-phones {
+    gap: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-phones input {
+    padding: 8px;
+    border: 2px solid #d1cfcf;
+    border-radius: 8px;
+}
+
+.form button {
+    background-color: rgb(29, 157, 200);
+    color: #fafafa;
+    width: 100%;
+    border-radius: 14px;
+    border: 0;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 14px;
 }

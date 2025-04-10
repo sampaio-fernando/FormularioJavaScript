@@ -1,151 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="./style.css" />
+
+   <title>Formulario</title>
+
 </head>
+
 <body>
-    <h1>Formulário</h1>
-    <p1><b>Informações pessoais</b></p1>
-    <form>
-        <label for="nome">Nome completo:</label>
-        <input
-            type="text" 
-            id='nome' 
-            nome="nome" 
-            placeholder="Digite seu nome:"
-         />
-        
-        <label for="dtNascimento">Data Nascimento:</label>
-         <input
-            type="date" 
-            id='dtNascimento' 
-            nome="dataNascimento" 
-            placeholder="Data de nascimento:"
-         />
 
-         <label for="cpf">Cpf:</label>
-         <input
-            type="text" 
-            id='cpf' 
-            nome="cpf" 
-            placeholder="Digite seu cpf:"
-         />
+   <div class=container>
 
-         <label for="teleFixo">Telefone:</label>
-         <input
-            type="text"
-            id="teleFixo"
-            nome="teleFixo"
-            placeholder="Telefone fixo:"
-         />
-         <label for="celular">Celular:</label>
-        <input 
-            type="text"
-            id="celular"
-            nome="celular"
-            placeholder="Número de celular:"
-        />
+      <section class="header">
+         <h1>Nova Conta</h1>
+      </section>
 
-        <label><b>Informações Complementares</b></label>
+      <form id="form" class="form">
 
-        <label for="nomePai">Pai:</label>
-        <input
-            type="text"
-            id="nomePai"
-            nome="nomePai"
-            placeholder="Digite o nome do pai"
-        />
+         <div class="form-content">
+            <label for="username">Nome completo:</label>
+            <input type="text" id="username" placeholder="Digite o nome completo do usuário..." minlength="3"
+               maxlength="60" />
+         </div>
 
-        <label for="nomeMae">Mãe:</label>
-        <input
-            type="text"
-            id="nomeMae"
-            nome="nomePai"
-            placeholder="Digite o nome da mãe"
-        />
+         <div class="form-content">
+            <label for="date">Data de nascimento:</label>
+            <input type="date" id="date" required />
+         </div>
 
-        <label><b>Endereço</b></label>
+         <div class="form-content">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" placeholder="Digite seu CPF..." maxlength="14" />
+         </div>
 
-        <label for="cep">CEP:</label>
-        <input
-            type="text"
-            id="cep"
-            nome="cep"
-            placeholder="Digite seu CEP"
-         />
+         <div class="form-content">
+            <label for="telephone">Telefone:</label>
+            <input type="text" id="telephone" placeholder="(__) ________" />
+         </div>
 
-         <label for="endereco">Endereço:</label>
-        <input
-            type="text"
-            id="endereco"
-            nome="endereco"
-            placeholder="Ex: Av Café Filho"
-         />
+         <div class="form-content">
+            <label for="cell">Celular:</label>
+            <input type="text" id="cell" placeholder="(__) _ ________" />
+         </div>
 
-         <label for="num">Número:</label>
-        <input
-            type="text"
-            id="num"
-            nome="numero"
-            placeholder="Número da casa"
-         />
+         <div id="responsaveis" style="display: none">
+            <div class="form-content">
+               <label for="mother">Nome da mãe:</label>
+               <input type="text" id="mother" name="mae" minlength="3" maxlength="60" placeholder="Digite o nome completo da mãe..." />
+            </div>
 
-         <label for="compl">Complemento:</label>
-         <input
-            type="text"
-            id="compl"
-            nome="complemento"
-            placeholder="Opcional"
-          />
-        
-         <label for="cidade">Cidade:</label>
-         <input
-            type="text"
-            id="cidade"
-            nome="cidade"
-            placeholder="Digite o nome da cidade"
-          />
+            <div class="form-content">
+               <label for="father">Nome do pai:</label>
+               <input type="text" id="father" name="pai" minlength="3" maxlength="60" placeholder="Digite o nome completo do pai..." />
+            </div>
 
-          <label for="estado">Estado:</label>
-         <input
-            type="text"
-            id="estado"
-            nome="estado"
-            placeholder="Digite a UF"
-          />
+         </div>
 
-          <label><b>Informações da conta:</b></label>
+         <div class="form-content">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" placeholder="Digite seu CEP..." />
+         </div>
 
-          <label for="email">Email:</label>
-         <input
-            type="text"
-            id="email"
-            nome="email"
-            placeholder="Digite seu E-mail"
-          />
+         <div class="form-content">
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" placeholder="Ex: Av. Café Filho..." />
+         </div>
 
-          <label for="senha">Senha:</label>
-         <input
-            type="text"
-            id="senha"
-            nome="senha"
-            placeholder="Criar senha"
-          />
+         <div class="form-content">
+            <label for="number">Número</label>
+            <input type="text" id="number" placeholder="Digite o número da casa..." />
+         </div>
 
-          <label for="confSenha">Senha:</label>
-         <input
-            type="text"
-            id="confSenha"
-            nome="confSenha"
-            placeholder="Confirmar senha"
-          />
+         <div class="form-content">
+            <label for="complement">Complemento (opcional):</label>
+            <input type="text" id="complement" placeholder="Ex: casa verde..." maxlength="60" />
+         </div>
 
-          <button>Enviar</button>
-    </form>
+         <div class="form-content">
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" placeholder="Digite o nome da sua cidade..." />
+         </div>
 
+         <div class="form-content">
+            <label for="state">Estado:</label>
+            <input type="text" id="state" placeholder="Digite o estado em que reside..." />
+         </div>
+
+         <div class="form-content">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail..." />
+         </div>
+
+         <div class="form-content">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" minlength="8" placeholder="Criar senha..." />
+         </div>
+
+         <div class="form-content">
+            <label for="confirm">Confirmar senha:</label>
+            <input type="password" id="confirm" minlength="8" placeholder="Confirme sua senha..." />
+         </div>
+
+         <button type="submit">Cadastrar</button>
+
+      </form>
+
+   </div>
+
+   <script src="./script.js"></script>
 </body>
+
 </html>
